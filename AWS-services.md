@@ -44,85 +44,26 @@ Lambda supports:
 ## Elastic Beanstalk
 An orchestration service that allows you to deploy a web application at the touch of a button by spinning up (or provisioning) all of the services that you need to run your application.
 
-# Storage and Content Delivery
-
-## S3 and S3 Glacier
-Amazon Simple Storage Service (or S3) is an object storage system in the cloud.
-
-* A single object can be up to 5 terabytes in size.
-* You can enable Multi-Factor Authentication (MFA) Delete on an S3 bucket to prevent accidental deletions.
-* S3 Acceleration can be used to enable fast, easy, and secure transfers of files over long distances between your data source and your S3 bucket.
-
-S3 Glacier is a secure, durable, and low-cost storage class for data archiving.
-
-## DynamoDB
-DynamoDB is a NoSQL document database service that is fully managed. Unlike traditional databases, NoSQL databases, are schema-less. Schema-less simply means that the database doesn't contain a fixed (or rigid) data structure.
-
-* Stores data in JSON
-* Is Serverless
-
-## Relational Database Service (RDS)
-RDS Supports:
-* Oracle
-* PostgreSQL
-* MySQL
-* MariaDB
-* SQL Server
-
-## Redshift
-Data warehousing to manage big data
-
-## Cloud Front (CDN)
-Reduces latency, decreases server load by caching content in an edge location that is close to the user
-
-# Security
-## AWS Shield
-
- A managed DDoS (or Distributed Denial of Service) protection service that safeguards web applications running on AWS.
-
-It is available out of the box and always running as part of the free tier.
-
-## AWS Web Application Firewall (AWS WAF)
-WAF can stop common web attacks like:
-* SQL Injection
-* Cross-site scripting (XSS)
-
-by reviewing the data being sent to your application and stopping well-known attacks.
-
-## Identity & Access Management (IAM)
-Identity & Access Management (IAM) is an AWS service that allows us to configure who can access our AWS account, services, or even applications running in our account. IAM is a global service and is automatically available across ALL regions.
-
-NOT NO BE CONFUSED WITH EC2 Security Group
-
-With IAM it is possible to manage:
-* Users: Person or service (username and credentials)
-* IAM Groups: Collection of users
-* IAM Roles: Identity with permissiosn or set of privileges not asociated to users or groups
-* Policies: Granular level permissions, can be attached to users, groups or roles. Policies can be written in JSON
-
-# Networking and Elasticity
-
-## Route 53 (Cloud DNS)
-Is a cloud domain name system (DNS) service that has servers distributed around the globe 
-
-## Elasticity
-EC2, can be scaled up (vertically) this can easily be achieved by stopping an instance and resizing it to an instance type that has more RAM, CPU, IO, or you can scale out (or horizontally), which increases the number of resources. An example would be adding more servers.
-
-## EC2 Auto Scaling
- Is a service that monitors your EC2 instances and automatically adjusts by adding or removing EC2 instances based on conditions you define in order to maintain application availability and provide peak performance to your users.
+# Messaging and Containers
  
-  You can configure EC2 Auto Scaling to send an SNS notification whenever your EC2 Auto Scaling group scales.
-  
- ## AWS Auto Scaling
- Similar to EC2 auto scaling but for other services like DynamoDB
- 
- ## Elastic Load Balancer
- Automatically distributes incoming application traffic across multiple servers.
- 
- Elastic Load Balancing works with EC2 Instances, containers, IP addresses, and Lambda functions.
- 
- You can configure Amazon EC2 instances to only accept traffic from a load balancer.
+## Simple Notification Service (SNS)
+ A cloud service that allows you to send notifications to the users of your applications. SNS allows you to decouple the notification logic from being embedded in your applications and allows notifications to be published to a large number of subscribers.
 
+* SNS uses a publish/subscribe model.
+* SNS can publish messages to Amazon SQS queues, AWS Lambda functions, and HTTP/S webhooks.
 
+SNS Topic names are limited to 256 characters
+
+## Simple Queue Service (SQS)
+
+* FIFO queues support up to 300 messages per second.
+* FIFO queues guarantee the ordering of messages.
+* Standard queues offer best-effort ordering but no guarantees.
+* Standard queues deliver a message at least once, but occasionally more than one copy of a message is delivered.
+
+## Elastic Container Service (ECS)
+
+an orchestration service used for automating deployment, scaling, and managing of your containerized applications. ECS works well with Docker containers
  
+ ECS is used for automating deployment, scaling and managing your containerized applications.
  
