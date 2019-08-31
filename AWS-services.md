@@ -78,10 +78,51 @@ Reduces latency, decreases server load by caching content in an edge location th
 # Security
 ## AWS Shield
 
+ A managed DDoS (or Distributed Denial of Service) protection service that safeguards web applications running on AWS.
+
+It is available out of the box and always running as part of the free tier.
+
+## AWS Web Application Firewall (AWS WAF)
+WAF can stop common web attacks like:
+* SQL Injection
+* Cross-site scripting (XSS)
+
+by reviewing the data being sent to your application and stopping well-known attacks.
+
+## Identity & Access Management (IAM)
+Identity & Access Management (IAM) is an AWS service that allows us to configure who can access our AWS account, services, or even applications running in our account. IAM is a global service and is automatically available across ALL regions.
+
+NOT NO BE CONFUSED WITH EC2 Security Group
+
+With IAM it is possible to manage:
+* Users: Person or service (username and credentials)
+* IAM Groups: Collection of users
+* IAM Roles: Identity with permissiosn or set of privileges not asociated to users or groups
+* Policies: Granular level permissions, can be attached to users, groups or roles. Policies can be written in JSON
+
+# Networking and Elasticity
+
+## Route 53 (Cloud DNS)
+Is a cloud domain name system (DNS) service that has servers distributed around the globe 
+
+## Elasticity
+EC2, can be scaled up (vertically) this can easily be achieved by stopping an instance and resizing it to an instance type that has more RAM, CPU, IO, or you can scale out (or horizontally), which increases the number of resources. An example would be adding more servers.
+
+## EC2 Auto Scaling
+ Is a service that monitors your EC2 instances and automatically adjusts by adding or removing EC2 instances based on conditions you define in order to maintain application availability and provide peak performance to your users.
+ 
+  You can configure EC2 Auto Scaling to send an SNS notification whenever your EC2 Auto Scaling group scales.
+  
+ ## AWS Auto Scaling
+ Similar to EC2 auto scaling but for other services like DynamoDB
+ 
+ ## Elastic Load Balancer
+ Automatically distributes incoming application traffic across multiple servers.
+ 
+ Elastic Load Balancing works with EC2 Instances, containers, IP addresses, and Lambda functions.
+ 
+ You can configure Amazon EC2 instances to only accept traffic from a load balancer.
 
 
-
-
-
-
-
+ 
+ 
