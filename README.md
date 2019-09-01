@@ -8,3 +8,4 @@ Contains my notes about cloud development
 * [Networking and Elasticity](AWS/Networking-and-Elasticity.md)
 * [Messaging and Containers](AWS/Messaging-and-Containers.md)
 * [AWS Management Tools](AWS/AWS-Management.md)
+* [AWS CLI](AWS/AWS-CLI.md)

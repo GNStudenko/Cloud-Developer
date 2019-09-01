@@ -12,3 +12,10 @@ There are several useful features:
 * Collect and monitor log files
 * Set alarms and create triggers to run your AWS resources
 * React to changes in your AWS resources
+
+## Cloud Formation
+AWS Cloud Formation allows you to model your entire infrastructure in a text file template allowing you to provision AWS resources based on the scripts you write.
+
+Cloud Formation templates are written using JSON or YAML.
+
+There is a also a visual designer
